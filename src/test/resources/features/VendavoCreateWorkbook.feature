@@ -12,9 +12,9 @@
 # 
 Feature: Show casing the capabilities of cucumber-jvm framework
 	
-	@Test 
+    @Test 
   Scenario: Generate Country List Price at Pricing Region Price List
-  	When user opens vendavo website
+    When user opens vendavo website
     Then user signs in as vendavosystem for 3M
     And navigates to Price Manager page
     Then user reads WBNames sheet from 3M_TestData excel file for Flag=Y workbook
@@ -36,21 +36,4 @@ Feature: Show casing the capabilities of cucumber-jvm framework
     Then user creates evidence file
     Then user sends email to stakeholders with attachment
     
-#    @Test
-   Scenario: capturing the error message while submitting the workbook
-    When user opens vendavo website
-    Then user signs in as vendavosystem for 3M
-    And navigates to Price Manager page
-    Then user reads WBNames sheet from 3M_TestData excel file for Flag=Y workbook
-    Then user verifies the presence of Flag=Y folder and expands it
-    And user verifies the presence of Flag=Y workbook and clicks on it
-    Then user creates a New Workbook From Template for Flag=Y workbook
-    Then user reads WBFilterValues sheet from 3M_TestData excel file for Flag=Y workbook
-    And selects the filter values for 3M
-    Then user selects validity date values
-    Then user fills the workbook name
-    Then user opens worksheets and expands all of them and wait for data to load
-    Then user clicks on submit button
-	  Then user creates evidence file
-    Then user sends email to stakeholders with attachment
     
